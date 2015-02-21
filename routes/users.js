@@ -6,4 +6,9 @@ router.get('/', function(req, res, next) {
   res.send('respond with a resource');
 });
 
+/* GET users/test listing. */
+router.get('/test', function(req, res, next) {
+  res.send('respond with a resource. . . TEST!!!');
+});
+
 module.exports = router;
