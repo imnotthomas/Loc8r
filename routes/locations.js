@@ -5,6 +5,10 @@ var ctrl    = require('../controllers/locations.js');
 /* GET Home page */
 router.get('/', ctrl.home);
 
+router.get('/test', function(req, res, next) {
+    res.render('location-list', { title : 'location' });
+});
+
 /* GET Location  */
 router.get('/location', ctrl.locationInfo);
 
