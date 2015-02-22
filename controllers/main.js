@@ -8,5 +8,5 @@ module.exports.about = function(req, res, next) {
 
 /* Render Signin Page*/
 module.exports.signin = function(req, res, next) {
-    res.render('index', { title : 'signin' });
+    res.render('signin', { title : 'signin' });
 };
