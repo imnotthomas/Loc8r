@@ -1,12 +1,12 @@
-/* GET 'about us' page */
-module.exports.about = function(req, res){
-  res.render('generic-text', {
-    title: 'About Loc8r',
-    content: 'Loc8r was created to help people find places to sit down and get a bit of work done.\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed lorem ac nisi dignissim accumsan. Nullam sit amet interdum magna. Morbi quis faucibus nisi. Vestibulum mollis purus quis eros adipiscing tristique. Proin posuere semper tellus, id placerat augue dapibus ornare. Aenean leo metus, tempus in nisl eget, accumsan interdum dui. Pellentesque sollicitudin volutpat ullamcorper.\n\nSuspendisse tincidunt, lectus non suscipit pharetra, purus ipsum vehicula sapien, a volutpat mauris ligula vel dui. Proin varius interdum elit, eu porttitor quam consequat et. Quisque vitae felis sed ante fringilla fermentum in vitae sem. Quisque fermentum metus at neque sagittis imperdiet. Phasellus non laoreet massa, eu laoreet nibh. Pellentesque vel magna vulputate, porta augue vel, dapibus nisl. Phasellus aliquet nibh nec nunc posuere fringilla. Quisque sit amet dignissim erat. Nulla facilisi. Donec in sollicitudin ante. Cras rhoncus accumsan rutrum. Sed aliquet ligula dui, eget laoreet turpis tempor vitae.'
-  });
+/* Render About Page */
+module.exports.about = function(req, res, next) {
+    res.render('generic-text', {
+        title : 'About Loc8r',
+        content : 'Deep v synth DIY, food truck normcore four dollar toast 3 wolf moon Truffaut next level tote bag YOLO pug selvage ugh kitsch. Stumptown kogi yr, biodiesel photo booth slow-carb ugh. Lo-fi brunch photo booth biodiesel four loko fap before they sold out polaroid, bitters banh mi mixtape leggings Pitchfork readymade. Church-key locavore raw denim readymade leggings Thundercats. PBR letterpress put a bird on it Carles. Art party Helvetica selfies shabby chic, pork belly biodiesel occupy Marfa High Life dreamcatcher post-ironic. Ugh Kickstarter artisan banh mi, yr Godard polaroid fingerstache actually cardigan pug bitters.' 
+    });
 };
 
-/* GET 'sign in' page */
-module.exports.signin = function(req, res){
-  res.render('signin-index', { title: 'Sign in to Loc8r' });
+/* Render Signin Page*/
+module.exports.signin = function(req, res, next) {
+    res.render('index', { title : 'signin' });
 };
