@@ -13,6 +13,9 @@ var penis  = require('./routes/penis');
 var about  = require('./routes/about');
 var signin = require('./routes/signin');
 
+// api routes
+var apiRoutes = require('./app_api/routes/locations');
+
 var app = express();
 
 // view engine setup
@@ -27,11 +30,15 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Web Page
 app.use('/', index);
 app.use('/users', users);
 app.use('/penis', penis);
 app.use('/about', about);
 app.use('/signin', signin);
+
+// API
+app.use('/api', apiRoutes);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
