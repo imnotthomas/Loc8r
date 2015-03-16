@@ -4,16 +4,16 @@ var reviewSchema = new mongoose.Schema({
   author: {
     displayName: String
   },
-  rating: {type: Number, required: true, min: 0, max: 5},
+  rating: {type: Number, min: 0, max: 5},
   reviewText: String,
   createdOn: {type: Date, "default": Date.now}
 });
 
 var openingTimeSchema = new mongoose.Schema({
-  days: {type: String, required: true},
+  days: {type: String},
   opening: String,
   closing: String,
-  closed: {type: Boolean, required: true}
+  closed: {type: Boolean}
 });
 
 var locationSchema = new mongoose.Schema({
