@@ -54,6 +54,18 @@ module.exports.locationsReadOne = function(req, res) {
     Loc
         .findById(req.params.locationid)
         .exec(function(err, location) {
+            console.log(req.params);
             sendJSONresponse(res, 200, location); 
         });
+};
+
+module.exports.locationsDelete = function(req, res) {
+    Loc
+    .findByIdAndRemove(req.params.locationid)
+    .exec(
+        function(err, location) {
+            console.log("Location id " + req.params.locationid + " deleted");
+            sendJSONresponse(res, 204,null);
+        }
+    );
 };
