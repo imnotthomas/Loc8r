@@ -7,7 +7,7 @@ var bodyParser = require('body-parser');
 require('./app_api/models/db');
 
 //var routes = require('./routes/index');
-var index  = require('./routes/locations');
+var index  = require('./routes/index');
 var users  = require('./routes/users');
 var penis  = require('./routes/penis');
 var about  = require('./routes/about');
@@ -29,6 +29,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'app_client')));
 
 // Web Page
 app.use('/', index);

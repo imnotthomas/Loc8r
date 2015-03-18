@@ -10,3 +10,7 @@ module.exports.about = function(req, res, next) {
 module.exports.signin = function(req, res, next) {
     res.render('signin', { title : 'signin' });
 };
+
+module.exports.angularApp = function(req, res) {
+    res.render('layout', {title: 'Loc8r'});
+};

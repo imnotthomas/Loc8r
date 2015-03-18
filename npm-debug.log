@@ -1,27 +1,69 @@
 0 info it worked if it ends with ok
-1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'start' ]
+1 verbose cli [ '/usr/bin/node',
+1 verbose cli   '/usr/bin/npm',
+1 verbose cli   'completion',
+1 verbose cli   '--',
+1 verbose cli   'npm',
+1 verbose cli   'show',
+1 verbose cli   'req' ]
 2 info using npm@1.4.28
 3 info using node@v0.10.36
 4 verbose node symlink /usr/bin/node
-5 verbose run-script [ 'prestart', 'start', 'poststart' ]
-6 info prestart Loc8r@0.0.0
-7 info start Loc8r@0.0.0
-8 verbose unsafe-perm in lifecycle true
-9 info Loc8r@0.0.0 Failed to exec start script
-10 error Loc8r@0.0.0 start: `node ./bin/www`
-10 error Exit status 8
-11 error Failed at the Loc8r@0.0.0 start script.
-11 error This is most likely a problem with the Loc8r package,
-11 error not with npm itself.
-11 error Tell the author that this fails on your system:
-11 error     node ./bin/www
-11 error You can get their info via:
-11 error     npm owner ls Loc8r
-11 error There is likely additional logging output above.
-12 error System Linux 3.2.0-58-virtual
-13 error command "/usr/bin/node" "/usr/bin/npm" "start"
-14 error cwd /home/ubuntu/getting-mean/Loc8r
-15 error node -v v0.10.36
-16 error npm -v 1.4.28
-17 error code ELIFECYCLE
-18 verbose exit [ 1, true ]
+5 verbose request where is /-/short
+6 verbose request registry https://registry.npmjs.org/
+7 verbose request id a6e542d5e7a0878d
+8 verbose url raw /-/short
+9 verbose url resolving [ 'https://registry.npmjs.org/', './-/short' ]
+10 verbose url resolved https://registry.npmjs.org/-/short
+11 verbose request where is https://registry.npmjs.org/-/short
+12 info trying registry request attempt 1 at 14:36:31
+13 http GET https://registry.npmjs.org/-/short
+14 http 404 https://registry.npmjs.org/-/short
+15 verbose headers { date: 'Tue, 17 Mar 2015 14:36:33 GMT',
+15 verbose headers   server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+15 verbose headers   'content-type': 'application/json',
+15 verbose headers   'cache-control': 'max-age=0',
+15 verbose headers   'content-length': '51',
+15 verbose headers   'accept-ranges': 'bytes',
+15 verbose headers   via: '1.1 varnish',
+15 verbose headers   'x-served-by': 'cache-sjc3121-SJC',
+15 verbose headers   'x-cache': 'MISS',
+15 verbose headers   'x-cache-hits': '0',
+15 verbose headers   'x-timer': 'S1426602992.926544,VS0,VE87',
+15 verbose headers   'keep-alive': 'timeout=10, max=50',
+15 verbose headers   connection: 'Keep-Alive' }
+16 silly registry.get cb [ 404,
+16 silly registry.get   { date: 'Tue, 17 Mar 2015 14:36:33 GMT',
+16 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+16 silly registry.get     'content-type': 'application/json',
+16 silly registry.get     'cache-control': 'max-age=0',
+16 silly registry.get     'content-length': '51',
+16 silly registry.get     'accept-ranges': 'bytes',
+16 silly registry.get     via: '1.1 varnish',
+16 silly registry.get     'x-served-by': 'cache-sjc3121-SJC',
+16 silly registry.get     'x-cache': 'MISS',
+16 silly registry.get     'x-cache-hits': '0',
+16 silly registry.get     'x-timer': 'S1426602992.926544,VS0,VE87',
+16 silly registry.get     'keep-alive': 'timeout=10, max=50',
+16 silly registry.get     connection: 'Keep-Alive' } ]
+17 error TypeError: Object #<Object> has no method 'match'
+17 error     at escape (/usr/lib/node_modules/npm/lib/completion.js:185:10)
+17 error     at /usr/lib/node_modules/npm/lib/completion.js:199:14
+17 error     at Array.map (native)
+17 error     at /usr/lib/node_modules/npm/lib/completion.js:197:19
+17 error     at RegClient.<anonymous> (/usr/lib/node_modules/npm/node_modules/npm-registry-client/lib/get.js:162:20)
+17 error     at cb (/usr/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:57:9)
+17 error     at RegClient.<anonymous> (/usr/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:156:10)
+17 error     at cb (/usr/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:166:9)
+17 error     at RegClient.<anonymous> (/usr/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:320:12)
+17 error     at Request._callback (/usr/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:246:65)
+18 error If you need help, you may report this *entire* log,
+18 error including the npm and node versions, at:
+18 error     <http://github.com/npm/npm/issues>
+19 error System Linux 3.2.0-58-virtual
+20 error command "/usr/bin/node" "/usr/bin/npm" "completion" "--" "npm" "show" "req"
+21 error cwd /home/ubuntu/getting-mean/Loc8r
+22 error node -v v0.10.36
+23 error npm -v 1.4.28
+24 error type undefined_method
+25 verbose exit [ 1, true ]
